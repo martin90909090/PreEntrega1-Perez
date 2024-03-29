@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
 
-const ItemListContainer = ({message2}) => {
+const ItemListContainer = ({greeting}) => {
     return (
-        <div className="itemListContainer">
-            <h1>{message2}</h1>
-        </div>
+        <>
+            <div className="itemListContainer">
+                <h1>{greeting}</h1>
+            </div>
+        </>
     )
 }
 
 ItemListContainer.propTypes = {
-    message2: PropTypes.string.isRequired
+    greeting: PropTypes.string.isRequired
 };
 
 export default ItemListContainer;

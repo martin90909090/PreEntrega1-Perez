@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-      <NavBar message1="Hello" />
-      <ItemListContainer message2="Hello" />
+      <NavBar message="Hello" />
+      <ItemListContainer greeting="¡Bienvenid@!" />
     </>
   )
 }
