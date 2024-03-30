@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './itemListContainer.css';
 
 const ItemListContainer = ({greeting}) => {
     return (

@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
+import './superIndex.css';
 
-const SuperIndex = (count) => {
+const SuperIndex = ({count}) => {
     return (
-        <div>
-            <h1>SuperIndex</h1>
-        </div>
+        <>
+            <span className="count">{count}</span>
+        </>
     )
 }
 
-SuperIndex.prototype = {
+SuperIndex.propTypes = {
     count: PropTypes.number.isRequired
 }
 

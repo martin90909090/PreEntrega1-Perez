@@ -1,1 +1,18 @@
-/*# sourceMappingURL=itemListContainer.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.itemListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.itemListContainer h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=itemListContainer.css.map */
