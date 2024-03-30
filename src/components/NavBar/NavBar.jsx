@@ -25,11 +25,11 @@ const NavBar = () => {
                     <li className="nav-item active dropdown">
                         <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categorías</a>
                         <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Another action</a>
-                            <a className="dropdown-item" href="#">Something else here</a>
-                            <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Separated link</a>
+                            <a className="dropdown-item" href="#">Computadores Cuánticos</a>
+                            <a className="dropdown-item" href="#">AI GPUs</a>
+                            <a className="dropdown-item" href="#">Server CPUs</a>
+                            <a className="dropdown-item" href="#">Gaming PCs</a>
+                            <a className="dropdown-item" href="#">Creator PCs</a>
                         </div>
                     </li>
                     <li className="nav-item">
