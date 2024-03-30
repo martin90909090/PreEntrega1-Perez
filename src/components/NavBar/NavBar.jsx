@@ -9,7 +9,7 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
             <a className="navbar-brand" href="#" style={{marginLeft:'50px'}}>
                 <img src="src/assets/img/qTronicsLogo.png" alt="brandLogo" style={{height: '100px', width: 'auto'}} />
-                <span className="navbar-brand mb-0 h1" style={{fontSize:'30px'}}>QuantumTronics</span>
+                <span className="navbar-brand mb-0 h1" style={{fontSize:'45px'}}>QuantumTronics</span>
             </a>
             <button className="navbar-toggler" type="button" 
             data-toggle="collapse" data-target="#navbarNav" 
