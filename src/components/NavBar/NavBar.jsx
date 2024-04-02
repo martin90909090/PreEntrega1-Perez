@@ -6,12 +6,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Navbar2 = () => {
+const NavBar = () => {
   const[count,] = useState(1);
 
   return (
-    <Navbar expand="lg" className="bg-body-dark navbar-dark bg-dark" style={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
-      <Container>
+    <Navbar expand="lg" className="bg-body-dark navbar-dark bg-dark">
+      <Container style={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
         <Navbar.Brand href="#home" style={{marginLeft:'50px'}}>
         <img src="src/assets/img/qTronicsLogo.png" alt="brandLogo" style={{height: '100px', width: 'auto'}} />
           <span style={{fontSize:'45px'}}>QuantumTronics</span>
@@ -47,4 +47,4 @@ const Navbar2 = () => {
   );
 }
 
-export default Navbar2;
+export default NavBar;
