@@ -5,23 +5,24 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './navBar.css';
 
 const NavBar = () => {
-  const[count,] = useState(1);
-
+  const[count,] = useState(0);
+  
   return (
     <Navbar expand="lg" className="bg-body-dark navbar-dark bg-dark">
-      <Container style={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
-        <Navbar.Brand href="#home" style={{marginLeft:'50px'}}>
-        <img src="src/assets/img/qTronicsLogo.png" alt="brandLogo" style={{height: '100px', width: 'auto'}} />
-          <span style={{fontSize:'45px'}}>QuantumTronics</span>
-          </Navbar.Brand>
+      <Container className="container">
+        <Navbar.Brand className="navbar-brand" href="#home">
+          <img src="src/assets/img/qTronicsLogo.png" alt="brandLogo"  />
+          <span>QuantumTronics</span>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#link">Acerca de Nosotros</Nav.Link>
-            <NavDropdown title="Categorías" id="basic-nav-dropdown">
+            <Nav.Link className="link" href="#home">Inicio</Nav.Link>
+            <Nav.Link className="link" href="#link">Acerca de Nosotros</Nav.Link>
+            <NavDropdown className="link" title="Categorías" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                 Computadores Cuánticos
                 </NavDropdown.Item>
@@ -35,8 +36,8 @@ const NavBar = () => {
                 Gaming PCs
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">Contacto</Nav.Link>
-            <Nav.Link href='#link' style={{display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
+            <Nav.Link className="link contact-link" href="#link">Contacto</Nav.Link>
+            <Nav.Link className="link" href='#link'>
               <CartWidget />
               <Badge count={count} />
             </Nav.Link>
