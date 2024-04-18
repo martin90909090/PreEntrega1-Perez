@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import CartWidget from '../CartWidget/CartWidget';
-import SuperIndex from '../SuperIndex/SuperIndex';
+import Badge from '../Badge/Badge';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -38,7 +38,7 @@ const NavBar = () => {
             <Nav.Link href="#link">Contacto</Nav.Link>
             <Nav.Link href='#link' style={{display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
               <CartWidget />
-              <SuperIndex count={count} />
+              <Badge count={count} />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

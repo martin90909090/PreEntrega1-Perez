@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './superIndex.css';
+import './badge.css';
 
 const SuperIndex = ({count}) => {
     return (
