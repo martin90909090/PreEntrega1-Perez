@@ -38,7 +38,7 @@ const NavBar = () => {
             </NavDropdown>
             <Nav.Link className="link contact-link" href="#link">Contacto</Nav.Link>
             <Nav.Link className="link" href='#link'>
-              <Badge count={count} />
+              <Badge className="badge" count={count} />
               <CartWidget />
             </Nav.Link>
           </Nav>
