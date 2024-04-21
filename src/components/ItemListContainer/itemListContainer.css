@@ -2,17 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: noto sans;
 }
 
 .itemListContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  text-align: center;
   height: 100vh;
   width: 100%;
 }
-.itemListContainer h1 {
-  font-size: 80px;
-  margin-bottom: 20px;
+
+.header {
+  font-size: 70px;
+}
+
+.itemCount {
+  margin: "50px";
+  padding: "50px";
 }/*# sourceMappingURL=itemListContainer.css.map */
