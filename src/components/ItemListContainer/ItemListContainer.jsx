@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './itemListContainer.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemListContainer = ({greeting}) => {
     return (
@@ -7,6 +8,7 @@ const ItemListContainer = ({greeting}) => {
             <div className="itemListContainer">
                 <h1>{greeting}</h1>
             </div>
+            <ItemCount />
         </>
     )
 }
