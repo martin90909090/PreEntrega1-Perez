@@ -50,4 +50,12 @@ span {
 
 .contact-link {
   margin-left: 45px;
+}
+
+.cart {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
 }/*# sourceMappingURL=navBar.css.map */

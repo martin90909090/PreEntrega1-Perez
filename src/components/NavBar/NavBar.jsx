@@ -39,7 +39,7 @@ const NavBar = () => {
             <Nav.Link className="link contact-link" href="#link">Contacto</Nav.Link>
             <Nav.Link className="link" href='#link'>
               <Badge className="badge" count={count} />
-              <CartWidget />
+              <CartWidget className="cart" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
