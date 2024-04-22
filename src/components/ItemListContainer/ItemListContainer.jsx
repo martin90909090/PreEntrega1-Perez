@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import './itemListContainer.css';
 import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList';
 import { useState } from 'react';
 
 const ItemListContainer = ({greeting}) => {
@@ -19,10 +20,8 @@ const ItemListContainer = ({greeting}) => {
         <>
             <div className="itemListContainer">
                 <h1 className='header'>{greeting}</h1>
-                <ItemCount className='itemCount'
-                onMinus={onMinus}
-                onAdd={onAdd}
-                initial={count} />
+                <ItemCount className='itemCount' onMinus={onMinus} onAdd={onAdd} initial={count} />
+                <ItemList />
             </div>
         </>
     )
