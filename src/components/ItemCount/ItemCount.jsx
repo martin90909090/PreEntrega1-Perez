@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
-import './itemCount.css';
+import './itemCount.scss';
 
 const ItemCount = ({ onMinus, initial, onAdd }) => {
 
