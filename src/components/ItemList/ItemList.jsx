@@ -3,10 +3,11 @@ import Item from '../Item/Item';
 import './itemList.scss';
 
 const ItemList = () => {
-    const[items, setItems] = useState([]);
-    
+    const [items, setItems] = useState([]);
+
     useEffect(() => {
-        fetch("https://66263f8b052332d5532231ad.mockapi.io/api/v1/mock-api-v1")
+        setTimeout(() => {
+            fetch("https://fakestoreapi.com/products?limit=5")
         .then(response => {
             if(!response.ok) {
                 throw new Error('Network response was not ok');
@@ -17,21 +18,20 @@ const ItemList = () => {
                 const j = Math.floor(Math.random() * (i + 1));
                 [data[i], data[j]] = [data[j], data[i]];
             }
-            setItems(data.slice(0, 10));
+            setItems(data.slice(0, 5));
         }).catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
         });
-    }, []);
+        }, 2000);}, 
+    []);
 
     return (
         <div className='itemList'>
-            <ul>
+            <ul className='list'>
                 {items.map((item, index) => (
-                    <li key={index}>
-                        <Item {...item} />
-                    </li>
+                    <Item key={index} image={item.image} id={item.id} name={item.title} price={item.price} />
                 ))}
-            </ul>    
+            </ul>
         </div>
     )
 }

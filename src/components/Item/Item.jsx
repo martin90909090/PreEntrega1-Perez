@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import {Card} from 'react-bootstrap';
+import './item.scss';
 
-const Item = ({id, name, price, description}) => {
+const Item = ({id, image, name, price, description}) => {
     return (
-        <Card>
-            <Card.Body>
+        <Card className='card'>
+            <Card.Body className='body'>
+                <Card.Img variant='top' src={image} />
                 <Card.Title>{id} {name}</Card.Title>
-                <Card.Text>{price}</Card.Text>
                 <Card.Text>{description}</Card.Text>
+                <Card.Text>{price}</Card.Text>
             </Card.Body>
         </Card>
     )
@@ -16,6 +18,7 @@ const Item = ({id, name, price, description}) => {
 Item.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
 }
