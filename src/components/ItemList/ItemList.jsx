@@ -1,17 +1,37 @@
+import { useEffect, useState } from 'react';
 import Item from '../Item/Item';
 import './itemList.scss';
 
 const ItemList = () => {
+    const[items, setItems] = useState([]);
+    
+    useEffect(() => {
+        fetch("https://66263f8b052332d5532231ad.mockapi.io/api/v1/mock-api-v1")
+        .then(response => {
+            if(!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }).then(data => {
+            for (let i = data.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [data[i], data[j]] = [data[j], data[i]];
+            }
+            setItems(data.slice(0, 10));
+        }).catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
+    }, []);
+
     return (
-        <div>
-            <h1>ItemList</h1>
-            <div className='itemList'>
-                <Item id={1} name="Item 1" price={100} description="Description 1" />
-                <Item id={2} name="Item 2" price={200} description="Description 2" />
-                <Item id={3} name="Item 3" price={300} description="Description 3" />
-                <Item id={4} name="Item 4" price={400} description="Description 4" />
-                <Item id={5} name="Item 5" price={500} description="Description 5" />
-            </div>
+        <div className='itemList'>
+            <ul>
+                {items.map((item, index) => (
+                    <li key={index}>
+                        <Item {...item} />
+                    </li>
+                ))}
+            </ul>    
         </div>
     )
 }
