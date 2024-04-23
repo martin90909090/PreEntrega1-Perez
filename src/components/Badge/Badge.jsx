@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './badge.css';
 
-const SuperIndex = ({count}) => {
+const Badge = ({count}) => {
     return (
         <>
             <span className="count">{count}</span>
@@ -9,8 +9,8 @@ const SuperIndex = ({count}) => {
     )
 }
 
-SuperIndex.propTypes = {
+Badge.propTypes = {
     count: PropTypes.number.isRequired
 }
 
-export default SuperIndex;
+export default Badge;

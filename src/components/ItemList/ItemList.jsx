@@ -29,7 +29,7 @@ const ItemList = () => {
         <div className='itemList'>
             <ul className='list'>
                 {items.map((item, index) => (
-                    <Item key={index} image={item.image} id={item.id} name={item.title} price={item.price} />
+                    <Item key={index} image={item.image} id={item.id} name={item.title} price={item.price} description={item.description} />
                 ))}
             </ul>
         </div>
