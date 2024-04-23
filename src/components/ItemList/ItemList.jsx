@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
-import Item from '../Item/Item';
+import Item from '../Item/Item'; 
+import ItemListContainer from '../ItemListContainer/ItemListContainer'; 
 import './itemList.scss';
 
 const ItemList = () => {
     const [items, setItems] = useState([]);
+    const [selectedItem, setSelectedItem] = useState(null);
 
     useEffect(() => {
-        setTimeout(() => {
-            fetch("https://fakestoreapi.com/products?limit=5")
+        fetch("https://fakestoreapi.com/products?limit=5")
         .then(response => {
             if(!response.ok) {
                 throw new Error('Network response was not ok');
@@ -22,16 +23,20 @@ const ItemList = () => {
         }).catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
         });
-        }, 2000);}, 
-    []);
+    }, []);
+
+    const handleItemClick = (item) => {
+        setSelectedItem(item);
+    }
 
     return (
         <div className='itemList'>
             <ul className='list'>
                 {items.map((item, index) => (
-                    <Item key={index} image={item.image} id={item.id} name={item.title} price={item.price} description={item.description} />
+                    <Item key={index} image={item.image} id={item.id} name={item.title} price={item.price} description={item.description} handleClick={handleItemClick} />
                 ))}
             </ul>
+            {selectedItem && <ItemListContainer item={selectedItem} />}
         </div>
     )
 }
